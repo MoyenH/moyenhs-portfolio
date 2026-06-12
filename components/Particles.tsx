@@ -13,12 +13,14 @@ export default function Particles() {
   useEffect(() => {
     const canvas = canvasRef.current
     if (!canvas) return
-    const ctx = canvas.getContext('2d')!
+    const ctx = canvas.getContext('2d')
+    if (!ctx) return
     let W = 0, H = 0
     let particles: Particle[] = []
     let rafId: number
 
     function resize() {
+      if (!canvas) return
       W = canvas.width  = window.innerWidth
       H = canvas.height = window.innerHeight
     }
@@ -40,6 +42,7 @@ export default function Particles() {
     }
 
     function draw() {
+      if (!ctx) return
       ctx.clearRect(0, 0, W, H)
       particles.forEach(p => {
         p.x += p.vx; p.y += p.vy
