@@ -20,9 +20,8 @@ export default function Particles() {
     let rafId: number
 
     function resize() {
-      if (!canvas) return
-      W = canvas.width  = window.innerWidth
-      H = canvas.height = window.innerHeight
+      W = canvas!.width  = window.innerWidth
+      H = canvas!.height = window.innerHeight
     }
 
     function makeParticle(): Particle {
