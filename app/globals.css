@@ -37,7 +37,7 @@ body {
   border-radius: 3px;
 }
 
-/* ── Gradient text utility ── */
+
 .grad-text {
   background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 100%);
   -webkit-background-clip: text;
@@ -45,7 +45,7 @@ body {
   background-clip: text;
 }
 
-/* ── Reveal animations ── */
+
 .reveal, .reveal-left, .reveal-right, .reveal-scale {
   opacity: 0;
   transition: opacity .7s ease, transform .7s ease;
@@ -63,7 +63,6 @@ body {
   transform: none;
 }
 
-/* ── Stagger children ── */
 .stagger > * {
   opacity: 0;
   transform: translateY(20px);
@@ -76,7 +75,7 @@ body {
 .stagger.visible > *:nth-child(5) { opacity:1;transform:none;transition-delay:.40s }
 .stagger.visible > *:nth-child(6) { opacity:1;transform:none;transition-delay:.50s }
 
-/* ── Skill bars ── */
+
 .bar {
   height: 100%;
   border-radius: 3px;
@@ -86,7 +85,7 @@ body {
 }
 .bars-animated .bar { transform: scaleX(1); }
 
-/* ── Section label line ── */
+
 .section-label-line::before {
   content: '';
   display: inline-block;
@@ -97,7 +96,7 @@ body {
   vertical-align: middle;
 }
 
-/* ── Scan line ── */
+
 @keyframes scan { 0% { top: -2px; } 100% { top: 100%; } }
 .scan-line {
   position: absolute; left: 0; right: 0; height: 2px;
@@ -107,7 +106,7 @@ body {
   pointer-events: none;
 }
 
-/* ── Cursor blink ── */
+
 @keyframes blink { 50% { opacity: 0; } }
 .cursor {
   display: inline-block;
@@ -117,12 +116,12 @@ body {
   animation: blink .75s step-end infinite;
 }
 
-/* ── Photo ring spin ── */
+
 @keyframes spinRing { from { transform: rotate(0); } to { transform: rotate(360deg); } }
 .photo-ring  { animation: spinRing 20s linear infinite; }
 .photo-ring2 { animation: spinRing 30s linear infinite reverse; }
 
-/* ── Float badge ── */
+
 @keyframes floatBadge {
   0%,100% { transform: translateY(0); }
   50%     { transform: translateY(-8px); }
@@ -130,26 +129,26 @@ body {
 .float-badge  { animation: floatBadge 3s ease-in-out infinite; }
 .float-badge2 { animation: floatBadge 4s ease-in-out infinite .5s; }
 
-/* ── Drift glow ── */
+
 @keyframes drift1 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(-30px,20px)} }
 @keyframes drift2 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(20px,-25px)} }
 .drift1 { animation: drift1 12s ease-in-out infinite; }
 .drift2 { animation: drift2 15s ease-in-out infinite; }
 
-/* ── Scroll dot ── */
+
 @keyframes scrollDot {
   0%   { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(10px); opacity: 0; }
 }
 .scroll-dot { animation: scrollDot 2s ease-in-out infinite; }
 
-/* ── Hero fade-in ── */
+
 @keyframes fadeUp  { from{opacity:0;transform:translateY(18px)} to{opacity:1;transform:translateY(0)} }
 @keyframes fadeLeft{ from{opacity:0;transform:translateX(30px)} to{opacity:1;transform:translateX(0)} }
 .anim-fade-up   { opacity:0; animation: fadeUp .6s forwards; }
 .anim-fade-left { opacity:0; animation: fadeLeft .8s .3s forwards; }
 
-/* delay helpers */
+
 .delay-1 { animation-delay:.1s }
 .delay-2 { animation-delay:.25s }
 .delay-3 { animation-delay:.4s }
